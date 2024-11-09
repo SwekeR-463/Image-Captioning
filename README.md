@@ -4,6 +4,11 @@ kind of implementation of show attend and tell [paper](https://arxiv.org/abs/150
 the architecture is similar to the paper with resnet encoder, bahdanau attention i.e. soft attention described as per paper and LSTM encoder
 <br>
 
+#### Metrics
+Train Acc - 60%<br>
+Test Acc - 48%<br>
+BLEU Score - 0.0897<br>
+
 ### Dataset Class
 ```
 ```
