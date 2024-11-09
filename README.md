@@ -9,7 +9,7 @@ the architecture is similar to the paper with resnet encoder, bahdanau attention
 ```
 
 ### Attention Part
-```
+```python
 class BahdanauAttention(nn.Module):
     def __init__(self, enc_hid_dim, dec_hid_dim, attn_dim):
         super(BahdanauAttention, self).__init__()
@@ -33,8 +33,7 @@ class BahdanauAttention(nn.Module):
         #cij
         context = torch.bmm(attention_weights.unsqueeze(1), enc_out).squeeze(1)
         
-        return context, attention_weights
-    
+        return context, attention_weights 
 ```
 
 ### Inference
