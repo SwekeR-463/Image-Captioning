@@ -41,5 +41,41 @@ class BahdanauAttention(nn.Module):
 ```
 
 ### BLEU Score
-```
+```python
+from nltk.translate.bleu_score import corpus_bleu
+
+def calculate_bleu(predicted_captions, ground_truth_captions):
+
+    predicted_captions = [caption.split() for caption in predicted_captions]
+    ground_truth_captions = [[caption.split()] for caption in ground_truth_captions]  
+    
+    bleu_score = corpus_bleu(ground_truth_captions, predicted_captions)
+    return bleu_score
+
+def evaluate_model(model, test_loader, tokenizer):
+    model.eval()
+    predicted_captions = []
+    ground_truth_captions = []
+    
+    with torch.no_grad():
+        for image, captions in test_loader:
+            image = image.to(device)
+            captions = captions.to(device)
+            
+            outputs, _ = model(image, captions)
+            
+            _, predicted = outputs.max(2)
+            predicted = predicted.cpu().numpy()
+
+            for idx in range(predicted.shape[0]):
+                predicted_caption = tokenizer.decode(predicted[idx], skip_special_tokens=True)
+                predicted_captions.append(predicted_caption)
+                
+                ground_truth_caption = tokenizer.decode(captions[idx, 1:], skip_special_tokens=True)
+                ground_truth_captions.append(ground_truth_caption)
+
+    #Calculate BLEU score
+    bleu_score = calculate_bleu(predicted_captions, ground_truth_captions)
+    print(f"BLEU Score: {bleu_score:.4f}")
+    return bleu_score
 ```
