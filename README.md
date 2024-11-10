@@ -115,6 +115,7 @@ def predict_caption(image_path, model, tokenizer, max_len=50):
 ```
 
 ### BLEU Score
+the bleu score measures how similar the generated caption is with the actual caption.
 ```python
 from nltk.translate.bleu_score import corpus_bleu
 
@@ -155,6 +156,7 @@ def evaluate_model(model, test_loader, tokenizer):
 ```
 
 ### Future Works(maybe)
+implementing the hard attention part <br>
 shifting to Distributed Data Parallel in [Pytorch](https://pytorch.org/docs/stable/generated/torch.nn.parallel.DistributedDataParallel.html)<br>
 training on Flickr30k<br>
 wrapping the model weights in FastAPI and deploying on aws or azure i.e. end2end making<br>
