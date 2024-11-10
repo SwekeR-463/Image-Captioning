@@ -8,11 +8,15 @@ the architecture is similar to the paper with efficientnet_b5 encoder, bahdanau 
 
 
 #### Metrics
-Train Acc - 60%<br>
-Test Acc - 48%<br>
-BLEU Score - 0.0897<br>
+Train Acc - 65%<br>
+Test Acc - 75%<br>
+BLEU Score - 1.814<br>
 
-### Samples
+## Samples
+
+#![Screenshot 2024-11-10 131258](https://github.com/user-attachments/assets/76b2b1ce-b88d-4ef5-8338-0f14be7d3954)
+
+![Screenshot 2024-11-10 131040](https://github.com/user-attachments/assets/ec9897fb-7588-40ab-8b90-f7a16704fc36)
 
 ### Dataset Class
 ```python
