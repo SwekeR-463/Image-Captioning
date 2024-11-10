@@ -4,6 +4,9 @@ kind of implementation of show attend and tell [paper](https://arxiv.org/abs/150
 the architecture is similar to the paper with efficientnet_b5 encoder, bahdanau attention i.e. soft attention described as per paper and LSTM encoder
 <br>
 
+![for_preferred_client](https://github.com/user-attachments/assets/aa27a21e-0d0c-43b5-81a0-01374aa57076)
+
+
 #### Metrics
 Train Acc - 60%<br>
 Test Acc - 48%<br>
