@@ -3,8 +3,7 @@ kind of implementation of show attend and tell [paper](https://arxiv.org/abs/150
 <br>
 the architecture is similar to the paper with efficientnet_b5 encoder, bahdanau attention i.e. soft attention described as per paper and LSTM encoder
 <br>
-
-![for_preferred_client](https://github.com/user-attachments/assets/aa27a21e-0d0c-43b5-81a0-01374aa57076)
+![image](https://github.com/user-attachments/assets/47987502-f2ba-4f5b-a03f-d3648535bc44)
 
 
 #### Metrics
@@ -160,8 +159,8 @@ def evaluate_model(model, test_loader, tokenizer):
 ```
 
 ### Future Works(maybe)
-implementing the hard attention part <br>
-shifting to Distributed Data Parallel in [Pytorch](https://pytorch.org/docs/stable/generated/torch.nn.parallel.DistributedDataParallel.html)<br>
-training on Flickr30k<br>
-wrapping the model weights in FastAPI and deploying on aws or azure i.e. end2end making<br>
-also playing around different hyperparameters for getting the best results<br>
+- [ ] implementing the hard attention part 
+- [ ] shifting to Distributed Data Parallel in [Pytorch](https://pytorch.org/docs/stable/generated/torch.nn.parallel.DistributedDataParallel.html)
+- [ ] training on Flickr30k
+- [ ] wrapping the model weights in FastAPI and deploying on aws or azure i.e. end2end making
+- [ ] also playing around different hyperparameters for getting the best results
